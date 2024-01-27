@@ -108,7 +108,7 @@ int main()
 	}
     auto stopTime = high_resolution_clock::now();
 
-    cout << "<" << duration_cast<milliseconds>(stopTime - startTime).count() << "ms> <" << primecount << "> <" << sum << ">" << endl;
+    // cout << "<" << duration_cast<milliseconds>(stopTime - startTime).count() << "ms> <" << primecount << "> <" << sum << ">" << endl;
     of << "<" << duration_cast<milliseconds>(stopTime - startTime).count() << "ms> <" << primecount << "> <" << sum << ">" << endl;
 
     while (primes.size() > 10)
@@ -116,22 +116,22 @@ int main()
         primes.pop();
     }
 
-    cout << "<";
+    // cout << "<";
     of << "<";
     for (int i = 0; i < 10; i++)
     {
         ll tmp = primes.top();
         primes.pop();
-        cout << tmp;
+        // cout << tmp;
         of << tmp;
         if (i == 9)
         {
-            cout << ">" << endl;
+            // cout << ">" << endl;
             of << ">" << endl;
         }
         else
         {
-            cout << ", ";
+            // cout << ", ";
             of << ", ";
         }
     }
